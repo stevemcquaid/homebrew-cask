@@ -7,8 +7,11 @@ cask 'kubebuilder' do
   name 'Kubebuilder'
   homepage 'https://github.com/kubernetes-sigs/kubebuilder'
 
-  binary "kubebuilder_#{version}_darwin_amd64/bin/kubebuilder", target: 'kubebuilder'
-  binary "kubebuilder_#{version}_darwin_amd64/bin/kubectl", target: 'kubectl'
-  binary "kubebuilder_#{version}_darwin_amd64/bin/kube-apiserver", target: 'kube-apiserver'
-  binary "kubebuilder_#{version}_darwin_amd64/bin/etcd", target: 'etcd'
+  binary "kubebuilder_#{version}_darwin_amd64/bin/kubebuilder", target: '/usr/local/bin/kubebuilder/bin/kubebuilder'
+  binary "kubebuilder_#{version}_darwin_amd64/bin/kubectl", target: '/usr/local/bin/kubebuilder/bin/kubectl'
+  binary "kubebuilder_#{version}_darwin_amd64/bin/kube-apiserver", target: '/usr/local/bin/kubebuilder/bin/kube-apiserver'
+  binary "kubebuilder_#{version}_darwin_amd64/bin/etcd", target: '/usr/local/bin/kubebuilder/bin/etcd'
+
+  caveats "kubebuilder testing expects a path of: /usr/local/kubebuilder. Might need to `export KUBEBUILDER_ASSETS=/usr/local/bin/kubebuilder/bin/`."
+
 end
