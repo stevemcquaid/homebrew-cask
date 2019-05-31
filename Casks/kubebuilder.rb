@@ -1,6 +1,6 @@
 cask 'kubebuilder' do
-  version '2.0.0-alpha.1'
-  sha256 'c19887e34f5ff008d89ae3e86aeecd0560002c0dacd36f870b46741e9426b551'
+  version '2.0.0-alpha.2'
+  sha256 '795e49c0c9111f27307f63af9271f736efc1d2c8d2379be0087ff26321a7719c'
 
   url "https://github.com/kubernetes-sigs/kubebuilder/releases/download/v#{version}/kubebuilder_#{version}_darwin_amd64.tar.gz"
   appcast 'https://github.com/kubernetes-sigs/kubebuilder/releases.atom'
